@@ -29,7 +29,7 @@ def get_dist(pkgname):
         return None
 
 
-version = '0.8.0a0'
+version = '0.8.2'
 sha = 'Unknown'
 package_name = 'torchvision'
 
@@ -331,8 +331,8 @@ def get_extensions():
 
     ffmpeg_exe = distutils.spawn.find_executable('ffmpeg')
     # Disable ffmpeg by default
-    no_ffmpeg = os.environ.get("NO_FFMPEG", True)
-    has_ffmpeg = ffmpeg_exe is not None and not no_ffmpeg
+    #no_ffmpeg = os.environ.get("NO_FFMPEG", True)
+    has_ffmpeg = ffmpeg_exe is not None #and not no_ffmpeg
     print("FFmpeg found: {}".format(has_ffmpeg))
 
     if has_ffmpeg:
